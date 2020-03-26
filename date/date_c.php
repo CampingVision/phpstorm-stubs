@@ -17,7 +17,7 @@ interface DateTimeInterface {
     const RFC7231 = 'D, d M Y H:i:s \G\M\T';
     const RSS = 'D, d M Y H:i:s O';
     const W3C = 'Y-m-d\TH:i:sP';
-    
+
     /* Methods */
     /**
      * (PHP 5 &gt;=5.5.0)<br/>
@@ -342,7 +342,6 @@ class DateTime implements DateTimeInterface {
      * or specifies a timezone
      * (e.g. <em>2010-01-28T15:00:00+02:00</em>).
      * </p> <p></p></blockquote>
-     * @throws Exception Emits Exception in case of an error.
      */
     public function __construct ($time='now', DateTimeZone $timezone=null) {}
 
@@ -678,7 +677,7 @@ class DateInterval {
  */
 class DatePeriod implements Traversable {
     const EXCLUDE_START_DATE = 1;
-    
+
     /**
      * Start date
      * @var DateTimeInterface
@@ -690,31 +689,31 @@ class DatePeriod implements Traversable {
      * @var DateTimeInterface|null
      */
     public $current;
-    
+
     /**
      * End date.
      * @var DateTimeInterface|null
      */
     public $end;
-    
+
     /**
      * The interval
      * @var DateInterval
      */
     public $interval;
-    
+
     /**
      * Number of recurrences.
      * @var int
      */
     public $recurrences;
-    
+
     /**
      * Start of period.
      * @var bool
      */
     public $include_start_date;
-    
+
     /**
      * @param DateTimeInterface $start
      * @param DateInterval $interval
